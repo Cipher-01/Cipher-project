@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Department | Evergreen High School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Evergreen High School</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="science.html" class="active">Science Dept</a></li>
+                    <li><a href="register.php">Registration</a></li>
+                    <li><a href="login.php">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="content-section">
+            <h2>Science Department</h2>
+            <div class="moving-line"></div>
+            
+            <p>Our science department is equipped with state-of-the-art laboratories to help students explore the wonders of the universe.</p>
+            
+            <div class="interactive-box" id="factBox">
+                <h3>Did you know?</h3>
+                <p>The chemical formula for water is <strong>H<sub>2</sub>O</strong>.</p>
+                <p>In mathematics, we teach concepts like x<sup>2</sup> + y<sup>2</sup> = z<sup>2</sup>.</p>
+                <button class="btn" style="margin-top: 15px; background: white; color: #2c3e50;" onclick="changeFact()">Show Another Fact</button>
+            </div>
+
+            <p>We believe in hands-on learning where students can test hypotheses and document their results accurately using proper scientific notation like 10<sup>5</sup> and defining chemical compounds like CO<sub>2</sub> and H<sub>2</sub>SO<sub>4</sub>.</p>
+
+        </section>
+    </main>
+     <script>
+        function changeFact() {
+            const factBox = document.getElementById('factBox');
+            factBox.innerHTML = `
+                <h3>Fun Fact!</h3>
+                <p>Einstein's famous equation is <strong>E = mc<sup>2</sup></strong>.</p>
+                <p>Ozone is an inorganic molecule with the chemical formula <strong>O<sub>3</sub></strong>.</p>
+                <button class="btn" style="margin-top: 15px; background: white; color: #2c3e50;" onclick="location.reload()">Reset Fact</button>
+            `;
+        }
+    </script>
+<script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Evergreen High School. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
